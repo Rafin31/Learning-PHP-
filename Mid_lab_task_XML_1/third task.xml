@@ -1,0 +1,39 @@
+<information>
+
+	<section src="1">
+		<id>1</id>
+		<name>Jhon doe</name>
+		<address>
+			<flat>h# 38</flat>
+			<street>r#3</street>
+			<city>Banani,Dhaka</city>
+		</address>
+		<dept>sales</dept>
+		<salary>$20000</salary>
+    </section>
+
+    <section src="1">
+		<id>2</id>
+		<name>mark zuckerberg</name>
+		<address>
+			<flat>A/1</flat>
+			<street>h#20 R#18</street>
+			<city>Mirpur,dhaka</city>
+		</address>
+		<dept>accounts</dept>
+		<salary>$12000</salary>
+    </section>
+
+    <section src="1">
+		<id>3</id>
+		<name>Ala Voski</name>
+		<address>
+			<flat>H#38</flat>
+			<street>R#3</street>
+			<city>Motijheel</city>
+		</address>
+		<dept>Human Resource</dept>
+		<salary>$30000</salary>
+    </section>
+
+</information>
