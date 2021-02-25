@@ -19,15 +19,23 @@ if ( isset ( $_POST [ 'submit' ] ) ) {
 	$month  = $_POST [ 'month'];
 	$year   = $_POST [ 'year' ] ;
     $date_of_birth = [ $day , $month , $year ];
-    
-}
 
-if ( $name != "" && $email != "" && $user_name != "" && $password != "" && $confirm_password != "" && $gender != "" && !empty($date_of_birth) ){
-	if ($password == $confirm_password) {
 
-        if ( preg_match("/[@#$%]/", $password) && $user_name_length >= 2 && 
-   		$password_length >= 8) {
-       	$user = [	
+
+    if ( $name == "" || $email == "" || $user_name == "" || $password == "" || $confirm_password == "" || $gender == "" || empty($date_of_birth)) {
+ 	echo "Filled all the file... ";
+ }
+ elseif ( $password != $confirm_password) {
+ 	echo "Password didn't match with confirm Password ";
+ }
+ elseif ( !preg_match("/[@#$%]/", $password) ) {
+ 	echo "Password Should contain special cherecters";
+ }
+ elseif ( $user_name_length < 2 && $password_length < 8) {
+ 	echo "username should be more than 2 words and password should be more than 8 words......";
+ }
+ else{
+ 	$user = [	
 			                'name'=>$name, 
 							'user_name'=>$user_name, 
 							'email'=> $email,
@@ -36,18 +44,13 @@ if ( $name != "" && $email != "" && $user_name != "" && $password != "" && $conf
 							'date_barth'=> $date_of_birth,
 
 						];
-                $_SESSION['current_user'] = $user;
-				header('location: Task1.html');
-       }
-	else{
-		echo "Fill All the file and give atleast 2 word in username and your password Should be at least 8 charecter";
-	}
+
+	$_SESSION['current_user'] = $user;
+    header('location: Login.html');
+ }
+
 }
-else{
-	echo "passwprd Didn't match";
-}
-}
-else{
-	echo "Fill all The fields";
-}
+
 ?>
+
+ 
