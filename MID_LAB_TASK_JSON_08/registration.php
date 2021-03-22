@@ -31,17 +31,6 @@ header('location: Login.html');
 
 }
 
-
-
-
-
-
-
-
-    
 }
-
-
-
 
 ?>

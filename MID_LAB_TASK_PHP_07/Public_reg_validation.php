@@ -11,14 +11,10 @@ if ( isset ( $_POST [ 'submit' ] ) ) {
 	$user_name_length = strlen($user_name);
 	$password =$_POST [ 'password' ];
 	$password_length = strlen($password);
-	$confirm_password = $_POST [ 'confirm_password' ];
+	$confirm_password = $_POST [ 'con_password' ];
 	if(isset($_POST['radio'])){
 			  $gender =  $_POST [ 'radio' ]; 
 			}
-    $day    =   $_POST [ 'day'] ;
-	$month  = $_POST [ 'month'];
-	$year   = $_POST [ 'year' ] ;
-    $date_of_birth = [ $day , $month , $year ];
 
 
 
